@@ -13,3 +13,16 @@ const reverseString = (str: string) => {
 };
 const reverseStr = reverseString("typescript");
 console.log(reverseStr);
+
+// Problem Solving 3
+type StringOrNumber = string | number;
+const checkType = (input: StringOrNumber) => {
+  // Check Guard
+  if (typeof input === "string") {
+    return "String";
+  } else {
+    return "Number";
+  }
+};
+const checkTypes = checkType("Hello");
+console.log(checkTypes);
