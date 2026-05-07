@@ -16,8 +16,7 @@ console.log(reverseStr);
 
 // Problem Solving 3
 type StringOrNumber = string | number;
-const checkType = (input: StringOrNumber) => {
-  // Check Guard
+const checkType = (input: StringOrNumber): string => {
   if (typeof input === "string") {
     return "String";
   } else {
@@ -49,8 +48,8 @@ interface Book {
   author: string;
   publishedYear: number;
 }
-const toggleReadStatus = (Book: Book) => {
-  return { ...Book, isRead: true };
+const toggleReadStatus = (book: Book) => {
+  return { ...book, isRead: true };
 };
 const myBook = {
   title: "TypeScript Guide",
