@@ -59,3 +59,27 @@ const myBook = {
 };
 const getBookInfo = toggleReadStatus(myBook);
 console.log(getBookInfo);
+
+// Prbolem Solving 6
+class Person {
+  name: string;
+  age: number;
+  constructor(name: string, age: number) {
+    this.name = name;
+    this.age = age;
+  }
+}
+class Student extends Person {
+  grade: string;
+  constructor(name: string, age: number, grade: string) {
+    super(name, age);
+    this.grade = grade;
+  }
+  getDetails() {
+    return `Name: ${this.name}, Age: ${this.age}, Grade: ${this.grade}`;
+  }
+}
+const student = new Student("Alice", 20, "A");
+
+const stuInfo = student.getDetails();
+console.log(stuInfo);
