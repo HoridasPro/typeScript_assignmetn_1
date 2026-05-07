@@ -93,6 +93,10 @@ interface User {
 
 type UserBasic = Pick<User, "id" | "name">;
 ```
+# Conclusion
+Pick and Omit help create smaller types from a master interface without repeating code.
+They reduce duplication and make the code cleaner and easier to maintain.
+This follows the DRY principle, making large TypeScript projects more scalable.
 
 <!-- Blog-3 -->
 
@@ -196,3 +200,6 @@ class Student extends Person {
 ```
 
 The `Person` class defines common properties like `name` and `age`.The `Student` class extends `Person`, reuses those properties, and adds an extra property called `grade`.
+# Conclusion
+The four pillars of OOP help organize code in a structured and reusable way in large TypeScript projects.
+They reduce complexity by improving reusability, flexibility, security, and maintainability of the code.
