@@ -199,7 +199,72 @@ class Student extends Person {
 }
 ```
 
+
 The `Person` class defines common properties like `name` and `age`.The `Student` class extends `Person`, reuses those properties, and adds an extra property called `grade`.
+
+# Abstraction
+Hide complex implementation details and show only required functionality.
+
+# For Example
+
+```ts
+abstract class Shape {
+  abstract getArea(): number;
+}
+
+class Circle extends Shape {
+  constructor(private radius: number) {
+    super();
+  }
+
+  getArea(): number {
+    return Math.PI * this.radius * this.radius;
+  }
+}
+
+const c = new Circle(5);
+console.log(c.getArea());
+
+# Polymorphism
+The same method can behave differently in different classes.
+
+# For Example
+
+```ts
+class Animal {
+  sound() {
+    console.log("Some sound");
+  }
+}
+
+class Cat extends Animal {
+  sound() {
+    console.log("Meow");
+  }
+}
+```
+
+# Encapsulation
+# For Example
+```ts
+class BankAccount {
+  private balance: number = 0;
+
+  deposit(amount: number) {
+    this.balance += amount;
+  }
+
+  getBalance() {
+    return this.balance;
+  }
+}
+
+const acc = new BankAccount();
+acc.deposit(500);
+console.log(acc.getBalance());
+```
+Protect data inside a class and control access.
+
 # Conclusion
 The four pillars of OOP help organize code in a structured and reusable way in large TypeScript projects.
 They reduce complexity by improving reusability, flexibility, security, and maintainability of the code.
